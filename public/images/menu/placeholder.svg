@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#F5E6C8"/>
+  <circle cx="200" cy="160" r="70" fill="#E8C547" opacity="0.7"/>
+  <rect x="120" y="250" width="160" height="20" rx="10" fill="#088395" opacity="0.6"/>
+  <rect x="140" y="280" width="120" height="12" rx="6" fill="#0A4D68" opacity="0.4"/>
+  <text x="200" y="340" text-anchor="middle" fill="#0A4D68" font-family="sans-serif" font-size="18">Menu Item</text>
+</svg>

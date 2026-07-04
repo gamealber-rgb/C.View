@@ -1,0 +1,176 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Room;
+use Illuminate\Database\Seeder;
+
+class RoomSeeder extends Seeder
+{
+    public function run(): void
+    {
+        Room::query()->delete();
+
+        $amenitySets = [
+            [
+                'en' => ['WiFi', 'AC', 'Sea View', 'Mini Fridge'],
+                'ar' => ['واي فاي', 'تكييف', 'إطلالة بحرية', 'ثلاجة صغيرة'],
+            ],
+            [
+                'en' => ['WiFi', 'AC', 'Balcony', 'Coffee Maker'],
+                'ar' => ['واي فاي', 'تكييف', 'شرفة', 'صانعة قهوة'],
+            ],
+            [
+                'en' => ['WiFi', 'AC', 'Sea View', 'Smart TV'],
+                'ar' => ['واي فاي', 'تكييف', 'إطلالة بحرية', 'تلفاز ذكي'],
+            ],
+            [
+                'en' => ['WiFi', 'AC', 'Garden View', 'Desk'],
+                'ar' => ['واي فاي', 'تكييف', 'إطلالة على الحديقة', 'مكتب'],
+            ],
+            [
+                'en' => ['WiFi', 'AC', 'Sea View', 'Living Area', 'Mini Bar'],
+                'ar' => ['واي فاي', 'تكييف', 'إطلالة بحرية', 'صالة جلوس', 'ميني بار'],
+            ],
+        ];
+
+        $rooms = [
+            [
+                'number' => '101',
+                'floor' => 1,
+                'name' => 'Coastal Twin',
+                'name_ar' => 'غرفة توأم ساحلية',
+                'bed' => 'Twin',
+                'bed_ar' => 'سريران توأم',
+                'capacity' => 2,
+                'price' => 109.00,
+                'sort_order' => 1,
+            ],
+            [
+                'number' => '102',
+                'floor' => 1,
+                'name' => 'Ocean View Double',
+                'name_ar' => 'غرفة دبل بإطلالة بحرية',
+                'bed' => 'Queen',
+                'bed_ar' => 'سرير Queen',
+                'capacity' => 2,
+                'price' => 129.00,
+                'sort_order' => 2,
+            ],
+            [
+                'number' => '103',
+                'floor' => 1,
+                'name' => 'Harbor Breeze Room',
+                'name_ar' => 'غرفة نسيم الميناء',
+                'bed' => 'Queen',
+                'bed_ar' => 'سرير Queen',
+                'capacity' => 2,
+                'price' => 119.00,
+                'sort_order' => 3,
+            ],
+            [
+                'number' => '201',
+                'floor' => 2,
+                'name' => 'Ocean View Double',
+                'name_ar' => 'غرفة دبل بإطلالة بحرية',
+                'bed' => 'Queen',
+                'bed_ar' => 'سرير Queen',
+                'capacity' => 2,
+                'price' => 129.00,
+                'sort_order' => 4,
+            ],
+            [
+                'number' => '202',
+                'floor' => 2,
+                'name' => 'Tide Pool Studio',
+                'name_ar' => 'استوديو بركة المد',
+                'bed' => 'Queen',
+                'bed_ar' => 'سرير Queen',
+                'capacity' => 2,
+                'price' => 99.00,
+                'sort_order' => 5,
+            ],
+            [
+                'number' => '301',
+                'floor' => 3,
+                'name' => 'Coastal Twin',
+                'name_ar' => 'غرفة توأم ساحلية',
+                'bed' => 'Twin',
+                'bed_ar' => 'سريران توأم',
+                'capacity' => 2,
+                'price' => 109.00,
+                'sort_order' => 6,
+            ],
+            [
+                'number' => '302',
+                'floor' => 3,
+                'name' => 'Harbor Breeze Room',
+                'name_ar' => 'غرفة نسيم الميناء',
+                'bed' => 'Queen',
+                'bed_ar' => 'سرير Queen',
+                'capacity' => 2,
+                'price' => 119.00,
+                'sort_order' => 7,
+            ],
+            [
+                'number' => '303',
+                'floor' => 3,
+                'name' => 'Ocean View Double',
+                'name_ar' => 'غرفة دبل بإطلالة بحرية',
+                'bed' => 'Queen',
+                'bed_ar' => 'سرير Queen',
+                'capacity' => 2,
+                'price' => 129.00,
+                'sort_order' => 8,
+            ],
+            [
+                'number' => '401',
+                'floor' => 4,
+                'name' => 'Sweet Suite',
+                'name_ar' => 'جناح السويت',
+                'bed' => 'King',
+                'bed_ar' => 'سرير King',
+                'capacity' => 4,
+                'price' => 189.00,
+                'sort_order' => 9,
+            ],
+            [
+                'number' => '402',
+                'floor' => 4,
+                'name' => 'Sweet Suite Deluxe',
+                'name_ar' => 'جناح السويت الفاخر',
+                'bed' => 'King',
+                'bed_ar' => 'سرير King',
+                'capacity' => 4,
+                'price' => 209.00,
+                'sort_order' => 10,
+            ],
+        ];
+
+        foreach ($rooms as $index => $room) {
+            $amenities = $amenitySets[$room['floor'] === 4 ? 4 : ($index % 4)];
+
+            Room::create([
+                'number' => $room['number'],
+                'floor' => $room['floor'],
+                'name' => $room['name'],
+                'name_ar' => $room['name_ar'],
+                'description' => 'A comfortable '.$room['name'].' (Room '.$room['number'].'), designed with a minimalist coastal aesthetic. Wake up to soft natural light and the calming atmosphere of our seaside motel.',
+                'description_ar' => $room['name_ar'].' مريحة (غرفة '.$room['number'].')، بتصميم ساحلي بسيط. استيقظ على ضوء طبيعي ناعم وأجواء ملاذنا الهادئة على البحر.',
+                'price_per_night' => $room['price'],
+                'capacity' => $room['capacity'],
+                'bed_type' => $room['bed'],
+                'bed_type_ar' => $room['bed_ar'],
+                'amenities' => $amenities['en'],
+                'amenities_ar' => $amenities['ar'],
+                'images' => [
+                    'images/rooms/placeholder.svg',
+                    'images/rooms/placeholder.svg',
+                    'images/rooms/placeholder.svg',
+                ],
+                'is_available' => true,
+                'sort_order' => $room['sort_order'],
+            ]);
+        }
+    }
+}
