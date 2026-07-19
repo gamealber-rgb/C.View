@@ -4,7 +4,7 @@
 @section('meta_description', __('site.about.meta_description'))
 
 @section('content')
-    <section class="bg-gradient-to-r from-ocean-deep to-ocean-mid px-4 py-14 text-white sm:px-6">
+    <section class="bg-gradient-to-r from-ocean-mid to-[#3699a1] px-4 py-14 text-white sm:px-6">
         <div class="mx-auto max-w-6xl">
             <h1 class="text-3xl font-bold sm:text-4xl">{{ __('site.about.heading') }}</h1>
             <p class="mt-2 max-w-2xl text-white/85">{{ __('site.about.subtitle') }}</p>
@@ -58,9 +58,9 @@
                 @endforeach
             </div>
 
-            <div class="mx-auto mt-10 max-w-3xl rounded-2xl bg-ocean-deep/5 p-6 text-center">
+            <div class="mx-auto mt-10 max-w-3xl rounded-2xl bg-ocean-mid/5 p-6 text-center">
                 <p class="font-medium text-ocean-deep">{{ __('site.faq.still_questions') }}</p>
-                <a href="{{ route('contact') }}" class="mt-3 inline-block rounded-xl bg-ocean-mid px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-ocean-deep">
+                <a href="{{ route('contact') }}" class="mt-3 inline-block rounded-xl bg-ocean-mid px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#3699a1]">
                     {{ __('site.faq.contact_cta') }}
                 </a>
             </div>

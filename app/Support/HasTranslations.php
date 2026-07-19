@@ -4,7 +4,7 @@ namespace App\Support;
 
 trait HasTranslations
 {
-    protected function localized(string $field): string
+    protected function localized(string $field): ?string
     {
         $localizedField = $field.'_ar';
 

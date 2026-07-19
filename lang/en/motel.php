@@ -22,20 +22,21 @@ return [
     ],
 
     'stay' => [
-        'check_in' => '2:00 PM',
+        'check_in' => '1:00 PM',
         'check_out' => '12:00 PM',
-        'payment' => 'Cash, bank transfer',
-        'parking' => 'Parking available near the resort',
-        'breakfast' => 'Optional breakfast — order via menu or WhatsApp',
+        'payment' => 'Cash, Sham Cash',
+        'parking' => 'Valet parking service',
+        'breakfast' => 'Stay includes free breakfast',
         'children' => 'Children welcome — extra bed on request',
         'pets' => 'Pets are not allowed',
-        'smoking' => 'Non-smoking rooms',
+        'hookah' => 'Hookahs are not allowed',
+        'visitors' => 'Room visits are not allowed',
         'languages' => 'Arabic, English',
     ],
 
-    'cancellation' => 'Free cancellation up to 24 hours before check-in. Late cancellation or no-show may be charged one night.',
+    'cancellation' => 'A 30% deposit is required upon booking. In case of cancellation, the deposit is non-refundable.',
 
-    'price_note' => 'Rates shown are per night and do not include breakfast unless stated. Seasonal and holiday rates may vary.',
+    'price_note' => 'Rates shown are per night and include free breakfast. Seasonal and holiday rates may vary.',
 
     'highlights' => [
         [
@@ -51,8 +52,8 @@ return [
             'description' => '24/7 reception with quick support via WhatsApp.',
         ],
         [
-            'title' => 'Food & beverages',
-            'description' => 'Digital menu and room service for light meals and refreshing drinks.',
+            'title' => 'Orders',
+            'description' => 'Food and drinks menu with round-the-clock room service.',
         ],
     ],
 
@@ -103,17 +104,15 @@ return [
         ],
     ],
 
-    'menu_hours' => [
-        'breakfast' => '7:00 AM – 10:00 AM',
-        'lunch' => '12:00 PM – 3:00 PM',
-        'dinner' => '6:00 PM – 10:00 PM',
-        'drinks' => '10:00 AM – 10:00 PM',
+    'menu_service' => [
+        'availability' => '24/7 on request',
+        'delivery' => 'Room service or reception',
     ],
 
-    'dietary' => [
-        'halal' => 'All dishes are halal',
-        'vegetarian' => 'Vegetarian options available — see the menu',
-        'allergies' => 'Tell us about food allergies when ordering via WhatsApp',
+    'menu_notes' => [
+        'order' => 'Order via WhatsApp or from reception',
+        'variants' => 'Some drinks come in multiple flavors — specify when ordering',
+        'alcohol' => 'Alcoholic beverages for guests 18+ only',
     ],
 
     'services' => [
@@ -133,8 +132,8 @@ return [
         ],
         [
             'name' => 'Room Service',
-            'description' => 'Enjoy breakfast trays, light bites, and beverages delivered directly to your room. Browse our menu and order via WhatsApp.',
-            'hours' => 'Mon–Sun, 7:00 AM – 10:00 PM',
+            'description' => 'Enjoy breakfast trays, light bites, and beverages delivered directly to your room. Browse our menu and order via WhatsApp — available 24/7 on request.',
+            'hours' => '24/7 on request',
             'icon' => 'room-service',
             'whatsapp_message' => 'Hi, I would like to order room service at C View Motel.',
         ],
@@ -161,11 +160,11 @@ return [
         ],
         [
             'question' => 'What are check-in and check-out times?',
-            'answer' => 'Check-in from 2:00 PM, check-out by 12:00 PM. For early check-in or late check-out, contact reception — we will try to accommodate based on availability.',
+            'answer' => 'Check-in from 1:00 PM, check-out by 12:00 PM. For early check-in or late check-out, contact reception — we will try to accommodate based on availability.',
         ],
         [
             'question' => 'Is breakfast included?',
-            'answer' => 'Breakfast is optional and can be ordered via the menu or room service. Room rates do not include breakfast by default.',
+            'answer' => 'Yes, free breakfast is included with your stay.',
         ],
         [
             'question' => 'Is WiFi available?',
@@ -173,32 +172,32 @@ return [
         ],
         [
             'question' => 'What is the cancellation policy?',
-            'answer' => 'Free cancellation up to 24 hours before arrival. Late cancellation or no-show may be charged one night.',
+            'answer' => 'A 30% deposit is required upon booking. In case of cancellation, the deposit is non-refundable.',
         ],
         [
             'question' => 'Is parking available?',
-            'answer' => 'Parking is available near Golden Sands resort. Ask reception on arrival for directions.',
+            'answer' => 'We offer valet parking service. Contact reception on arrival to arrange it.',
         ],
         [
             'question' => 'Are children welcome?',
             'answer' => 'Yes, children are welcome. Extra beds may be available in some rooms — tell us your guest count when booking.',
         ],
         [
-            'question' => 'How do I order from the menu?',
-            'answer' => 'Browse the digital menu then order via WhatsApp from the Menu page or room service.',
+            'question' => 'How do I place an order?',
+            'answer' => 'Browse the Food or Drinks section, then order via WhatsApp from the Orders page or room service.',
         ],
     ],
 
     'policies' => [
         'privacy' => 'We respect your privacy. Data you share via WhatsApp or the contact form (name, phone, email) is used only to respond and coordinate bookings. We do not sell your data to third parties. Questions: info@cview.com',
-        'terms' => 'By booking or staying at C View Motel, guests agree to respect hotel rules: no smoking in rooms, no disturbance to other guests, and care for room property. Management may refuse or end a stay for rule violations.',
-        'cancellation_detail' => 'To cancel, message us via WhatsApp or email at least 24 hours before arrival. In force majeure cases, contact us to arrange an alternative date subject to availability.',
+        'terms' => 'By booking or staying at C View Motel, guests agree to respect hotel rules: hookahs are not allowed, room visits are not allowed, no disturbance to other guests, and care for room property. Management may refuse or end a stay for rule violations.',
+        'cancellation_detail' => 'To cancel, contact us via WhatsApp or email. Please note that the 30% deposit paid at booking is non-refundable once the reservation is confirmed. In exceptional circumstances, reach out to discuss alternatives subject to availability.',
     ],
 
     'whatsapp' => [
         'booking' => "Hi, I'd like to book Room :number (:name) at :motel. Check-in: ___, Check-out: ___.",
         'contact' => 'Hi, I have a question about staying at :motel.',
-        'menu_order' => 'Hi, I would like to order from the menu at C View Motel. Order: ___',
+        'menu_order' => 'Hi, I would like to place an order at C View Motel. Order: ___',
         'contact_form' => "Hi, message from C View Motel website:\nName: :name\nPhone: :phone\nEmail: :email\n\n:message",
     ],
 

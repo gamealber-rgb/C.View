@@ -22,33 +22,36 @@
 
     <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Great+Vibes&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{{ asset('js/tailwind.js') }}"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        ocean: {
-                            deep: '#0A4D68',
-                            mid: '#088395',
-                            light: '#05BFDB',
+        if (typeof tailwind !== 'undefined') {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            ocean: {
+                                deep: '#3A3632',
+                                mid: '#43bac4',
+                                light: '#9FDCE3',
+                            },
+                            sand: {
+                                light: '#e8ded2',
+                                mid: '#43bac4',
+                                dark: '#cfc4b8',
+                            },
+                            brand: {
+                                teal: '#43bac4',
+                                sand: '#e8ded2',
+                                white: '#ffffff',
+                            },
                         },
-                        sand: {
-                            light: '#F5E6C8',
-                            mid: '#E8C547',
-                            dark: '#D4A574',
+                        fontFamily: {
+                            sans: ['Segoe UI', 'Tahoma', 'Arial', 'Noto Sans Arabic', 'system-ui', 'sans-serif'],
                         },
-                    },
-                    fontFamily: {
-                        sans: ['DM Sans', 'Noto Sans Arabic', 'system-ui', 'sans-serif'],
                     },
                 },
-            },
-        };
+            };
+        }
     </script>
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     @stack('styles')

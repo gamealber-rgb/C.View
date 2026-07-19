@@ -4,7 +4,7 @@
 @section('meta_description', __('site.rooms.meta_description'))
 
 @section('content')
-    <section class="bg-gradient-to-r from-ocean-deep to-ocean-mid px-4 py-14 text-white sm:px-6">
+    <section class="bg-gradient-to-r from-ocean-mid to-[#3699a1] px-4 py-14 text-white sm:px-6">
         <div class="mx-auto max-w-6xl">
             <h1 class="text-3xl font-bold sm:text-4xl">{{ __('site.rooms.heading') }}</h1>
             <p class="mt-2 max-w-2xl text-white/85">{{ __('site.rooms.subtitle') }}</p>
@@ -40,8 +40,8 @@
 
 @push('styles')
     <style>
-        .floor-filter-btn { background: white; color: #0A4D68; border: 1px solid #E8C547; }
-        .floor-filter-btn.active { background: #088395; color: white; border-color: #088395; }
-        .floor-filter-btn:hover:not(.active) { background: #F5E6C8; }
+        .floor-filter-btn { background: white; color: #3A3632; border: 1px solid #cfc4b8; }
+        .floor-filter-btn.active { background: #43bac4; color: white; border-color: #43bac4; }
+        .floor-filter-btn:hover:not(.active) { background: #e8ded2; }
     </style>
 @endpush

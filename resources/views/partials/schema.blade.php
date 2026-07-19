@@ -21,7 +21,7 @@
             'latitude' => 34.9167,
             'longitude' => 35.8667,
         ],
-        'checkinTime' => '14:00',
+        'checkinTime' => '13:00',
         'checkoutTime' => '12:00',
         'numberOfRooms' => 10,
         'amenityFeature' => [

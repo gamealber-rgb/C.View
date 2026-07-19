@@ -10,7 +10,8 @@
         ['label' => __('site.stay.breakfast'), 'value' => $stay['breakfast']],
         ['label' => __('site.stay.children'), 'value' => $stay['children']],
         ['label' => __('site.stay.pets'), 'value' => $stay['pets']],
-        ['label' => __('site.stay.smoking'), 'value' => $stay['smoking']],
+        ['label' => __('site.stay.hookah'), 'value' => $stay['hookah']],
+        ['label' => __('site.stay.visitors'), 'value' => $stay['visitors']],
         ['label' => __('site.stay.languages'), 'value' => $stay['languages']],
         ['label' => __('site.stay.cancellation'), 'value' => __('motel.cancellation')],
     ];

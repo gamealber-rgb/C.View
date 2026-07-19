@@ -7,10 +7,7 @@
              class="h-full w-full object-cover">
     </div>
     <div class="min-w-0 flex-1">
-        <div class="flex items-start justify-between gap-3">
-            <h3 class="font-semibold text-ocean-deep">{{ $item->localized_name }}</h3>
-            <span class="shrink-0 font-bold text-ocean-mid">${{ number_format($item->price, 2) }}</span>
-        </div>
+        <h3 class="font-semibold text-ocean-deep">{{ $item->localized_name }}</h3>
         @if ($item->localized_description)
             <p class="mt-1 text-sm text-ocean-deep/70">{{ $item->localized_description }}</p>
         @endif

@@ -14,62 +14,56 @@
 
     <link rel="icon" type="image/png" href="public/images/logo.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Great+Vibes&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="public/js/tailwind.js"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        ocean: { deep: '#0A4D68', mid: '#088395', light: '#05BFDB' },
-                        sand: { light: '#F5E6C8', mid: '#E8C547', dark: '#D4A574' },
-                    },
-                    fontFamily: {
-                        sans: ['DM Sans', 'Noto Sans Arabic', 'system-ui', 'sans-serif'],
+        if (typeof tailwind !== 'undefined') {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            ocean: { deep: '#3A3632', mid: '#43bac4', light: '#9FDCE3' },
+                            sand: { light: '#e8ded2', mid: '#43bac4', dark: '#cfc4b8' },
+                            brand: { teal: '#43bac4', sand: '#e8ded2', white: '#ffffff' },
+                        },
+                        fontFamily: {
+                            sans: ['Segoe UI', 'Tahoma', 'Arial', 'Noto Sans Arabic', 'system-ui', 'sans-serif'],
+                        },
                     },
                 },
-            },
-        };
+            };
+        }
     </script>
     <link rel="stylesheet" href="public/css/custom.css">
 </head>
 <body class="min-h-screen bg-sand-light font-sans text-ocean-deep antialiased">
 
     <!-- Info bar -->
-    <div class="border-b border-sand-mid/30 bg-ocean-deep text-white">
+    <div class="border-b border-white/20 bg-ocean-mid text-white">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-4 py-2 text-xs sm:text-sm sm:px-6">
             <span class="flex items-center gap-1.5 text-white/90">
-                <svg class="h-3.5 w-3.5 shrink-0 text-sand-mid" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <svg class="h-3.5 w-3.5 shrink-0 text-white/90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span data-i18n="info_bar.0">على خطوات من البحر</span>
             </span>
             <span class="flex items-center gap-1.5 text-white/90">
-                <svg class="h-3.5 w-3.5 shrink-0 text-sand-mid" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <svg class="h-3.5 w-3.5 shrink-0 text-white/90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span data-i18n="info_bar.1">10 غرف</span>
             </span>
             <span class="flex items-center gap-1.5 text-white/90">
-                <svg class="h-3.5 w-3.5 shrink-0 text-sand-mid" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <svg class="h-3.5 w-3.5 shrink-0 text-white/90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span data-i18n="info_bar.2">استقبال 24/7</span>
             </span>
             <span class="flex items-center gap-1.5 text-white/90">
-                <svg class="h-3.5 w-3.5 shrink-0 text-sand-mid" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <svg class="h-3.5 w-3.5 shrink-0 text-white/90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span data-i18n="info_bar.3">واي فاي مجاني</span>
             </span>
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="site-nav sticky top-0 z-50">
-        <div class="site-nav__pattern-strip" aria-hidden="true"></div>
-        <div class="site-nav__body">
+    <nav class="site-nav sticky top-0 z-50 border-b border-sand-dark/40 bg-white/95 backdrop-blur-sm">
             <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
                 <a href="#" class="site-nav__logo shrink-0 transition opacity-95 hover:opacity-100">
-                    <div id="logo-nav" class="logo-brand inline-flex flex-col items-end text-end">
-                        <span class="logo-script text-[2rem] leading-none text-ocean-deep">C View</span>
-                        <span class="logo-subtitle text-[0.55rem] mt-1 text-ocean-mid font-normal uppercase">MOTEL</span>
-                    </div>
+                    <img src="public/images/logo.png" alt="C View Motel" class="h-11 w-auto object-contain sm:h-12">
                 </a>
                 <div class="flex items-center gap-2 md:order-3">
                     <div class="site-nav__locale flex overflow-hidden rounded-lg border border-ocean-deep/25 text-xs font-bold uppercase tracking-wide" role="group" aria-label="تغيير اللغة">
@@ -86,31 +80,26 @@
                 <div id="nav-menu" class="site-nav__menu hidden w-full flex-col gap-1 border-t border-ocean-deep/10 pt-4 md:order-2 md:flex md:w-auto md:flex-1 md:flex-row md:items-center md:justify-end md:gap-1.5 md:border-0 md:pt-0 lg:gap-2">
                     <a href="#" class="site-nav__link site-nav__link--active rounded-lg px-3 py-2 text-sm font-medium transition" data-i18n="nav.home">الرئيسية</a>
                     <a href="#" class="site-nav__link rounded-lg px-3 py-2 text-sm font-medium transition" data-i18n="nav.rooms">الغرف</a>
-                    <a href="#" class="site-nav__link rounded-lg px-3 py-2 text-sm font-medium transition" data-i18n="nav.menu">المأكولات والمشروبات</a>
+                    <a href="#" class="site-nav__link rounded-lg px-3 py-2 text-sm font-medium transition" data-i18n="nav.menu">الطلبات</a>
                     <a href="#" class="site-nav__link rounded-lg px-3 py-2 text-sm font-medium transition" data-i18n="nav.services">الخدمات</a>
                     <a href="#" class="site-nav__link rounded-lg px-3 py-2 text-sm font-medium transition" data-i18n="nav.about">من نحن</a>
                     <a href="#" class="site-nav__link rounded-lg px-3 py-2 text-sm font-medium transition" data-i18n="nav.contact">تواصل معنا</a>
                 </div>
             </div>
-        </div>
-        <div class="site-nav__pattern-border" aria-hidden="true"></div>
     </nav>
 
     <main>
         <!-- Hero -->
-        <section class="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-to-br from-ocean-deep to-ocean-mid px-4 py-20 text-white sm:px-6">
+        <section class="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-to-br from-ocean-mid to-[#3699a1] px-4 py-20 text-white sm:px-6">
             <div class="absolute inset-0 opacity-20" style="background-image: url('public/images/hero-coast.svg'); background-size: cover; background-position: center;"></div>
             <div class="relative z-10 mx-auto max-w-3xl text-center">
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sand-mid" data-i18n="home.hero_badge">ملاذ على البحر</p>
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/80" data-i18n="home.hero_badge">ملاذ على البحر</p>
                 <div class="mt-4 flex justify-center">
-                    <div class="logo-brand inline-flex flex-col items-center text-center">
-                        <span class="logo-script text-6xl sm:text-7xl md:text-8xl leading-none text-white">C View</span>
-                        <span class="logo-subtitle text-sm sm:text-base mt-3 text-white/90 font-normal uppercase">MOTEL</span>
-                    </div>
+                    <img src="public/images/logo-light.png" alt="C View Motel" class="h-24 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)] sm:h-28 md:h-32">
                 </div>
                 <p class="mt-5 text-lg text-white/90 sm:text-xl" data-i18n="tagline">ملاذك الهادئ على البحر</p>
                 <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-                    <a href="#" class="rounded-xl bg-sand-mid px-6 py-3 font-semibold text-ocean-deep transition hover:bg-sand-light" data-i18n="home.view_rooms">عرض الغرف</a>
+                    <a href="#" class="rounded-xl bg-white px-6 py-3 font-semibold text-ocean-mid transition hover:bg-brand-sand" data-i18n="home.view_rooms">عرض الغرف</a>
                     <a href="#contact-preview" class="rounded-xl border-2 border-white/60 px-6 py-3 font-semibold text-white transition hover:bg-white/10" data-i18n="home.contact_us">تواصل معنا</a>
                 </div>
             </div>
@@ -144,8 +133,8 @@
                         <p class="mt-2 text-sm leading-relaxed text-ocean-deep/70" data-i18n="highlights.2.desc">استقبال متاح 24/7 مع دعم سريع عبر واتساب.</p>
                     </div>
                     <div class="rounded-2xl border border-sand-mid/40 bg-sand-light/30 p-6">
-                        <h3 class="text-lg font-semibold text-ocean-deep" data-i18n="highlights.3.title">مأكولات ومشروبات</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-ocean-deep/70" data-i18n="highlights.3.desc">قائمة رقمية وخدمة غرف لوجبات خفيفة ومشروبات منعشة.</p>
+                        <h3 class="text-lg font-semibold text-ocean-deep" data-i18n="highlights.3.title">الطلبات</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-ocean-deep/70" data-i18n="highlights.3.desc">قائمة مأكولات ومشروبات مع خدمة غرف على مدار الساعة.</p>
                     </div>
                 </div>
             </div>
@@ -157,16 +146,17 @@
             <p class="mx-auto mt-2 max-w-xl text-center text-ocean-deep/70" data-i18n="home.stay_subtitle">كل ما تحتاج معرفته قبل الوصول.</p>
             <div class="mt-8 rounded-2xl border border-sand-mid/40 bg-white p-6 shadow-sm">
                 <dl class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.check_in">تسجيل الوصول</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.check_in_val">2:00 م</dd></div>
+                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.check_in">تسجيل الوصول</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.check_in_val">1:00 م</dd></div>
                     <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.check_out">تسجيل المغادرة</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.check_out_val">12:00 م</dd></div>
-                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.payment">طرق الدفع</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.payment_val">نقد، تحويل بنكي</dd></div>
-                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.parking">موقف السيارات</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.parking_val">موقف سيارات متاح بالقرب من المنتجع</dd></div>
-                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.breakfast">الإفطار</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.breakfast_val">إفطار اختياري — اطلب عبر القائمة أو واتساب</dd></div>
+                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.payment">طرق الدفع</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.payment_val">نقد، شام كاش</dd></div>
+                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.parking">موقف السيارات</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.parking_val">خدمة Valet لموقف السيارات</dd></div>
+                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.breakfast">الإفطار</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.breakfast_val">الإقامة تشمل فطوراً مجانياً</dd></div>
                     <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.children">الأطفال</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.children_val">الأطفال مرحّب بهم — سرير إضافي عند الطلب</dd></div>
                     <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.pets">الحيوانات الأليفة</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.pets_val">الحيوانات الأليفة غير مسموح بها</dd></div>
-                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.smoking">التدخين</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.smoking_val">التدخين ممنوع داخل الغرف</dd></div>
+                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.hookah">الأراكيل</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.hookah_val">الأراكيل ممنوعة</dd></div>
+                    <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.visitors">الزيارات</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.visitors_val">الزيارات داخل الغرف ممنوعة</dd></div>
                     <div><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.languages">اللغات</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.languages_val">العربية، الإنجليزية</dd></div>
-                    <div class="sm:col-span-2 lg:col-span-3"><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.cancellation">سياسة الإلغاء</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.cancellation_val">يمكن إلغاء الحجز مجاناً حتى 24 ساعة قبل موعد الوصول. الإلغاء المتأخر أو عدم الحضور قد يُطبَّق عليه رسوم ليلة واحدة.</dd></div>
+                    <div class="sm:col-span-2 lg:col-span-3"><dt class="text-xs font-semibold uppercase tracking-wide text-ocean-mid" data-i18n="stay.cancellation">سياسة الإلغاء</dt><dd class="mt-1 text-sm leading-relaxed text-ocean-deep/80" data-i18n="stay.cancellation_val">يُشترط دفع عربون مقدّم بنسبة 30% عند تأكيد الحجز. في حال إلغاء الحجز، لا تُسترد قيمة العربون المدفوع.</dd></div>
                 </dl>
             </div>
         </section>
@@ -195,7 +185,7 @@
             <p class="mx-auto mt-2 max-w-xl text-center text-ocean-deep/70" data-i18n="home.testimonials_subtitle">تجارب حقيقية من زوارنا.</p>
             <div class="mt-10 grid gap-6 md:grid-cols-3">
                 <blockquote class="rounded-2xl border border-sand-mid/40 bg-white p-6 shadow-sm">
-                    <div class="flex gap-0.5 text-sand-mid" aria-hidden="true">
+                    <div class="flex gap-0.5 text-ocean-mid" aria-hidden="true">
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -206,7 +196,7 @@
                     <footer class="mt-4 text-sm font-semibold text-ocean-mid" data-i18n="testimonials.0.name">— سارة م.</footer>
                 </blockquote>
                 <blockquote class="rounded-2xl border border-sand-mid/40 bg-white p-6 shadow-sm">
-                    <div class="flex gap-0.5 text-sand-mid" aria-hidden="true">
+                    <div class="flex gap-0.5 text-ocean-mid" aria-hidden="true">
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -217,7 +207,7 @@
                     <footer class="mt-4 text-sm font-semibold text-ocean-mid" data-i18n="testimonials.1.name">— أحمد ك.</footer>
                 </blockquote>
                 <blockquote class="rounded-2xl border border-sand-mid/40 bg-white p-6 shadow-sm">
-                    <div class="flex gap-0.5 text-sand-mid" aria-hidden="true">
+                    <div class="flex gap-0.5 text-ocean-mid" aria-hidden="true">
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -260,8 +250,8 @@
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-ocean-mid text-white">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                     </div>
-                    <h3 class="mt-4 text-lg font-semibold text-ocean-deep group-hover:text-ocean-mid" data-i18n="cards.menu.title">المأكولات والمشروبات</h3>
-                    <p class="mt-2 text-sm text-ocean-deep/70" data-i18n="cards.menu.desc">قائمة رقمية بأطباق ساحلية ومشروبات منعشة.</p>
+                    <h3 class="mt-4 text-lg font-semibold text-ocean-deep group-hover:text-ocean-mid" data-i18n="cards.menu.title">الطلبات</h3>
+                    <p class="mt-2 text-sm text-ocean-deep/70" data-i18n="cards.menu.desc">قائمة مأكولات ومشروبات — اطلب عبر واتساب أو خدمة الغرف.</p>
                 </a>
                 <a href="#" class="group rounded-2xl border border-sand-mid/40 bg-sand-light/50 p-6 transition hover:border-ocean-mid hover:shadow-md">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-ocean-mid text-white">
@@ -282,58 +272,55 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-auto border-t border-sand-mid/30 bg-ocean-deep text-white">
+    <footer class="mt-auto border-t border-white/10 bg-ocean-mid text-white">
         <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <div>
-                    <div id="logo-footer" class="logo-brand inline-flex flex-col items-end text-end">
-                        <span class="logo-script text-[2rem] leading-none text-white">C View</span>
-                        <span class="logo-subtitle text-[0.55rem] mt-1 text-white/90 font-normal uppercase">MOTEL</span>
-                    </div>
-                    <p class="mt-3 text-sm leading-relaxed text-ocean-light/90" data-i18n="description">فندق سياحي ضمن منتجع الرمال الذهبية بلمسة الفخامة والرقي</p>
+                    <img src="public/images/logo-light.png" alt="C View Motel" class="h-11 w-auto object-contain sm:h-12">
+                    <p class="mt-3 text-sm leading-relaxed text-white/90" data-i18n="description">فندق سياحي ضمن منتجع الرمال الذهبية بلمسة الفخامة والرقي</p>
                     <div class="mt-4 flex flex-wrap gap-3">
-                        <a href="https://www.instagram.com/c.view.syria?igsh=cWJ5Y25va2tsZGoz" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-sand-mid" aria-label="Instagram">
+                        <a href="https://www.instagram.com/c.view.syria?igsh=cWJ5Y25va2tsZGoz" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-white/80" aria-label="Instagram">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                         </a>
-                        <a href="https://maps.google.com/?q=Golden+Sands,+Tartus,+Syria" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-sand-mid" aria-label="Google Maps">
+                        <a href="https://maps.google.com/?q=Golden+Sands,+Tartus,+Syria" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-white/80" aria-label="Google Maps">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </a>
-                        <a href="https://maps.google.com/?q=Golden+Sands,+Tartus,+Syria" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-sand-mid hover:text-white" data-i18n="footer.reviews">تقييمات Google</a>
+                        <a href="https://maps.google.com/?q=Golden+Sands,+Tartus,+Syria" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-white/80 hover:text-white" data-i18n="footer.reviews">تقييمات Google</a>
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-sm font-semibold uppercase tracking-wide text-sand-mid" data-i18n="footer.contact">تواصل</h4>
+                    <h4 class="text-sm font-semibold uppercase tracking-wide text-white/80" data-i18n="footer.contact">تواصل</h4>
                     <ul class="mt-3 space-y-2 text-sm text-white/90">
                         <li data-i18n="address">سوريا، طرطوس، الرمال الذهبية</li>
-                        <li><a href="tel:963964862631" class="hover:text-sand-mid">+963 964862631</a></li>
-                        <li><a href="mailto:info@cview.com" class="hover:text-sand-mid">info@cview.com</a></li>
-                        <li><span class="text-sand-mid" data-i18n="footer.hours">أوقات الدوام</span>: 24/7</li>
+                        <li><a href="tel:963964862631" class="hover:text-white/80">+963 964862631</a></li>
+                        <li><a href="mailto:info@cview.com" class="hover:text-white/80">info@cview.com</a></li>
+                        <li><span class="text-white/80" data-i18n="footer.hours">أوقات الدوام</span>: 24/7</li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-sm font-semibold uppercase tracking-wide text-sand-mid" data-i18n="footer.explore">استكشف</h4>
+                    <h4 class="text-sm font-semibold uppercase tracking-wide text-white/80" data-i18n="footer.explore">استكشف</h4>
                     <ul class="mt-3 space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="nav.home">الرئيسية</a></li>
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="nav.rooms">الغرف</a></li>
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="nav.menu">المأكولات والمشروبات</a></li>
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="nav.services">الخدمات</a></li>
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="nav.about">من نحن</a></li>
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="nav.faq">الأسئلة الشائعة</a></li>
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="nav.contact">تواصل معنا</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="nav.rooms">الغرف</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="nav.menu">الطلبات</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="nav.services">الخدمات</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="nav.about">من نحن</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="nav.faq">الأسئلة الشائعة</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="nav.contact">تواصل معنا</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-sm font-semibold uppercase tracking-wide text-sand-mid" data-i18n="footer.stay_info">معلومات الإقامة</h4>
+                    <h4 class="text-sm font-semibold uppercase tracking-wide text-white/80" data-i18n="footer.stay_info">معلومات الإقامة</h4>
                     <ul class="mt-3 space-y-2 text-sm text-white/90">
-                        <li><span class="text-sand-mid" data-i18n="stay.check_in">تسجيل الوصول</span>: <span data-i18n="stay.check_in_val">2:00 م</span></li>
-                        <li><span class="text-sand-mid" data-i18n="stay.check_out">تسجيل المغادرة</span>: <span data-i18n="stay.check_out_val">12:00 م</span></li>
-                        <li><span class="text-sand-mid" data-i18n="stay.payment">طرق الدفع</span>: <span data-i18n="stay.payment_val">نقد، تحويل بنكي</span></li>
+                        <li><span class="text-white/80" data-i18n="stay.check_in">تسجيل الوصول</span>: <span data-i18n="stay.check_in_val">1:00 م</span></li>
+                        <li><span class="text-white/80" data-i18n="stay.check_out">تسجيل المغادرة</span>: <span data-i18n="stay.check_out_val">12:00 م</span></li>
+                        <li><span class="text-white/80" data-i18n="stay.payment">طرق الدفع</span>: <span data-i18n="stay.payment_val">نقد، شام كاش</span></li>
                     </ul>
-                    <h4 class="mt-5 text-sm font-semibold uppercase tracking-wide text-sand-mid" data-i18n="footer.policies">السياسات</h4>
+                    <h4 class="mt-5 text-sm font-semibold uppercase tracking-wide text-white/80" data-i18n="footer.policies">السياسات</h4>
                     <ul class="mt-3 space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="footer.privacy">سياسة الخصوصية</a></li>
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="footer.terms">شروط الإقامة</a></li>
-                        <li><a href="#" class="hover:text-sand-mid" data-i18n="footer.cancellation">سياسة الإلغاء</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="footer.privacy">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="footer.terms">شروط الإقامة</a></li>
+                        <li><a href="#" class="hover:text-white/80" data-i18n="footer.cancellation">سياسة الإلغاء</a></li>
                     </ul>
                 </div>
             </div>
@@ -357,7 +344,7 @@
         const translations = {
             ar: {
                 'info_bar.0': 'على خطوات من البحر', 'info_bar.1': '10 غرف', 'info_bar.2': 'استقبال 24/7', 'info_bar.3': 'واي فاي مجاني',
-                'nav.home': 'الرئيسية', 'nav.rooms': 'الغرف', 'nav.menu': 'المأكولات والمشروبات', 'nav.services': 'الخدمات', 'nav.about': 'من نحن', 'nav.faq': 'الأسئلة الشائعة', 'nav.contact': 'تواصل معنا',
+                'nav.home': 'الرئيسية', 'nav.rooms': 'الغرف', 'nav.menu': 'الطلبات', 'nav.services': 'الخدمات', 'nav.about': 'من نحن', 'nav.faq': 'الأسئلة الشائعة', 'nav.contact': 'تواصل معنا',
                 'tagline': 'ملاذك الهادئ على البحر',
                 'home.hero_badge': 'ملاذ على البحر', 'home.view_rooms': 'عرض الغرف', 'home.contact_us': 'تواصل معنا',
                 'home.about_title': 'عن الفندق', 'home.about_link': 'اقرأ المزيد عنا →',
@@ -366,16 +353,17 @@
                 'highlights.0.title': 'موقع ساحلي مميز', 'highlights.0.desc': 'داخل منتجع الرمال الذهبية وعلى مقربة من شاطئ طرطوس.',
                 'highlights.1.title': 'غرف مريحة', 'highlights.1.desc': '10 غرف على الأرضي وطابقين وجناح سويت بتصميم ساحلي هادئ.',
                 'highlights.2.title': 'خدمة على مدار الساعة', 'highlights.2.desc': 'استقبال متاح 24/7 مع دعم سريع عبر واتساب.',
-                'highlights.3.title': 'مأكولات ومشروبات', 'highlights.3.desc': 'قائمة رقمية وخدمة غرف لوجبات خفيفة ومشروبات منعشة.',
+                'highlights.3.title': 'الطلبات', 'highlights.3.desc': 'قائمة مأكولات ومشروبات مع خدمة غرف على مدار الساعة.',
                 'home.stay_title': 'معلومات الإقامة', 'home.stay_subtitle': 'كل ما تحتاج معرفته قبل الوصول.',
-                'stay.check_in': 'تسجيل الوصول', 'stay.check_in_val': '2:00 م', 'stay.check_out': 'تسجيل المغادرة', 'stay.check_out_val': '12:00 م',
-                'stay.payment': 'طرق الدفع', 'stay.payment_val': 'نقد، تحويل بنكي', 'stay.parking': 'موقف السيارات', 'stay.parking_val': 'موقف سيارات متاح بالقرب من المنتجع',
-                'stay.breakfast': 'الإفطار', 'stay.breakfast_val': 'إفطار اختياري — اطلب عبر القائمة أو واتساب',
+                'stay.check_in': 'تسجيل الوصول', 'stay.check_in_val': '1:00 م', 'stay.check_out': 'تسجيل المغادرة', 'stay.check_out_val': '12:00 م',
+                'stay.payment': 'طرق الدفع', 'stay.payment_val': 'نقد، شام كاش', 'stay.parking': 'موقف السيارات', 'stay.parking_val': 'خدمة Valet لموقف السيارات',
+                'stay.breakfast': 'الإفطار', 'stay.breakfast_val': 'الإقامة تشمل فطوراً مجانياً',
                 'stay.children': 'الأطفال', 'stay.children_val': 'الأطفال مرحّب بهم — سرير إضافي عند الطلب',
                 'stay.pets': 'الحيوانات الأليفة', 'stay.pets_val': 'الحيوانات الأليفة غير مسموح بها',
-                'stay.smoking': 'التدخين', 'stay.smoking_val': 'التدخين ممنوع داخل الغرف',
+                'stay.hookah': 'الأراكيل', 'stay.hookah_val': 'الأراكيل ممنوعة',
+                'stay.visitors': 'الزيارات', 'stay.visitors_val': 'الزيارات داخل الغرف ممنوعة',
                 'stay.languages': 'اللغات', 'stay.languages_val': 'العربية، الإنجليزية',
-                'stay.cancellation': 'سياسة الإلغاء', 'stay.cancellation_val': 'يمكن إلغاء الحجز مجاناً حتى 24 ساعة قبل موعد الوصول. الإلغاء المتأخر أو عدم الحضور قد يُطبَّق عليه رسوم ليلة واحدة.',
+                'stay.cancellation': 'سياسة الإلغاء', 'stay.cancellation_val': 'يُشترط دفع عربون مقدّم بنسبة 30% عند تأكيد الحجز. في حال إلغاء الحجز، لا تُسترد قيمة العربون المدفوع.',
                 'home.offers_title': 'عروض وإقامات', 'home.offers_subtitle': 'استفد من باقاتنا الموسمية.',
                 'offers.0.title': 'إقامة نهاية الأسبوع', 'offers.0.desc': 'احجز ليلتين أو أكثر بين الخميس والسبت واستفد من أسعار موسمية خاصة — تواصل معنا عبر واتساب.',
                 'offers.1.title': 'إقامة عائلية', 'offers.1.desc': 'غرف بسعة تصل إلى 4 ضيوف مع خيارات سرير إضافي للأطفال عند الطلب.',
@@ -388,7 +376,7 @@
                 'nearby.2.name': 'مركز طرطوس', 'nearby.2.dist': '12 دقائق بالسيارة', 'nearby.3.name': 'مطاعم ومقاهي المنتجع', 'nearby.3.dist': '5 دقائق سيراً',
                 'home.explore_title': 'استكشف', 'home.explore_subtitle': 'كل ما تحتاجه لإقامة ساحلية مريحة.',
                 'cards.rooms.title': 'الغرف', 'cards.rooms.desc': 'تصفّح 10 غرف على الأرضي وطابقين وجناح السويت.',
-                'cards.menu.title': 'المأكولات والمشروبات', 'cards.menu.desc': 'قائمة رقمية بأطباق ساحلية ومشروبات منعشة.',
+                'cards.menu.title': 'الطلبات', 'cards.menu.desc': 'قائمة مأكولات ومشروبات — اطلب عبر واتساب أو خدمة الغرف.',
                 'cards.services.title': 'الخدمات', 'cards.services.desc': 'استقبال 24/7، غسيل، وخدمة الغرف.',
                 'cards.contact.title': 'تواصل معنا', 'cards.contact.desc': 'اعثر علينا على الخريطة وتواصل عبر واتساب أو إنستغرام.',
                 'description': 'فندق سياحي ضمن منتجع الرمال الذهبية بلمسة الفخامة والرقي', 'address': 'سوريا، طرطوس، الرمال الذهبية',
@@ -401,7 +389,7 @@
             },
             en: {
                 'info_bar.0': 'Steps from the sea', 'info_bar.1': '10 rooms', 'info_bar.2': '24/7 reception', 'info_bar.3': 'Free WiFi',
-                'nav.home': 'Home', 'nav.rooms': 'Rooms', 'nav.menu': 'Food & Drinks', 'nav.services': 'Services', 'nav.about': 'About', 'nav.faq': 'FAQ', 'nav.contact': 'Contact',
+                'nav.home': 'Home', 'nav.rooms': 'Rooms', 'nav.menu': 'Orders', 'nav.services': 'Services', 'nav.about': 'About', 'nav.faq': 'FAQ', 'nav.contact': 'Contact',
                 'tagline': 'Your peaceful escape by the sea',
                 'home.hero_badge': 'Seaside Retreat', 'home.view_rooms': 'View Rooms', 'home.contact_us': 'Contact Us',
                 'home.about_title': 'About Our Motel', 'home.about_link': 'Read more about us →',
@@ -410,16 +398,17 @@
                 'highlights.0.title': 'Prime coastal location', 'highlights.0.desc': 'Inside Golden Sands resort, close to Tartus shoreline.',
                 'highlights.1.title': 'Comfortable rooms', 'highlights.1.desc': '10 rooms on the ground floor, two upper floors, and sweet suite.',
                 'highlights.2.title': 'Round-the-clock service', 'highlights.2.desc': '24/7 reception with quick support via WhatsApp.',
-                'highlights.3.title': 'Food & beverages', 'highlights.3.desc': 'Digital menu and room service for light meals and refreshing drinks.',
+                'highlights.3.title': 'Orders', 'highlights.3.desc': 'Food and drinks menu with round-the-clock room service.',
                 'home.stay_title': 'Stay Information', 'home.stay_subtitle': 'Everything you need to know before arrival.',
-                'stay.check_in': 'Check-in', 'stay.check_in_val': '2:00 PM', 'stay.check_out': 'Check-out', 'stay.check_out_val': '12:00 PM',
-                'stay.payment': 'Payment', 'stay.payment_val': 'Cash, bank transfer', 'stay.parking': 'Parking', 'stay.parking_val': 'Parking available near the resort',
-                'stay.breakfast': 'Breakfast', 'stay.breakfast_val': 'Optional breakfast — order via menu or WhatsApp',
+                'stay.check_in': 'Check-in', 'stay.check_in_val': '1:00 PM', 'stay.check_out': 'Check-out', 'stay.check_out_val': '12:00 PM',
+                'stay.payment': 'Payment', 'stay.payment_val': 'Cash, Sham Cash', 'stay.parking': 'Parking', 'stay.parking_val': 'Valet parking service',
+                'stay.breakfast': 'Breakfast', 'stay.breakfast_val': 'Stay includes free breakfast',
                 'stay.children': 'Children', 'stay.children_val': 'Children welcome — extra bed on request',
                 'stay.pets': 'Pets', 'stay.pets_val': 'Pets are not allowed',
-                'stay.smoking': 'Smoking', 'stay.smoking_val': 'Non-smoking rooms',
+                'stay.hookah': 'Hookah', 'stay.hookah_val': 'Hookahs are not allowed',
+                'stay.visitors': 'Visitors', 'stay.visitors_val': 'Room visits are not allowed',
                 'stay.languages': 'Languages', 'stay.languages_val': 'Arabic, English',
-                'stay.cancellation': 'Cancellation', 'stay.cancellation_val': 'Free cancellation up to 24 hours before check-in. Late cancellation or no-show may be charged one night.',
+                'stay.cancellation': 'Cancellation', 'stay.cancellation_val': 'A 30% deposit is required upon booking. In case of cancellation, the deposit is non-refundable.',
                 'home.offers_title': 'Offers & Stays', 'home.offers_subtitle': 'Seasonal packages for your visit.',
                 'offers.0.title': 'Weekend stay', 'offers.0.desc': 'Book two or more nights between Thursday and Saturday for special seasonal rates — contact us on WhatsApp.',
                 'offers.1.title': 'Family stay', 'offers.1.desc': 'Rooms for up to 4 guests with extra bed options for children on request.',
@@ -432,7 +421,7 @@
                 'nearby.2.name': 'Tartus city center', 'nearby.2.dist': '12 min drive', 'nearby.3.name': 'Resort restaurants & cafés', 'nearby.3.dist': '5 min walk',
                 'home.explore_title': 'Explore', 'home.explore_subtitle': 'Everything you need for a comfortable coastal stay.',
                 'cards.rooms.title': 'Rooms', 'cards.rooms.desc': 'Browse 10 rooms on the ground floor, two upper floors, and the sweet suite.',
-                'cards.menu.title': 'Food & Drinks', 'cards.menu.desc': 'Digital menu with coastal favorites and refreshing drinks.',
+                'cards.menu.title': 'Orders', 'cards.menu.desc': 'Food and drinks menu — order via WhatsApp or room service.',
                 'cards.services.title': 'Services', 'cards.services.desc': '24/7 reception, laundry, and room service.',
                 'cards.contact.title': 'Contact', 'cards.contact.desc': 'Find us on the map and reach us via WhatsApp or Instagram.',
                 'description': 'A tourist hotel within Golden Sands resort with a touch of luxury and elegance.', 'address': 'Syria, Tartus, Golden Sands',

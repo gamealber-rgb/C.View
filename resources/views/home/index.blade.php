@@ -4,16 +4,16 @@
 @section('meta_description', __('site.home.meta_description'))
 
 @section('content')
-    <section class="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-to-br from-ocean-deep to-ocean-mid px-4 py-20 text-white sm:px-6">
+    <section class="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-to-br from-ocean-mid to-[#3699a1] px-4 py-20 text-white sm:px-6">
         <div class="absolute inset-0 opacity-20" style="background-image: url('{{ asset('images/hero-coast.svg') }}'); background-size: cover; background-position: center;"></div>
         <div class="relative z-10 mx-auto max-w-3xl text-center">
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sand-mid">{{ __('site.home.hero_badge') }}</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/90">{{ __('site.home.hero_badge') }}</p>
             <div class="mt-4 flex justify-center">
-                <x-logo variant="light" size="lg" />
+                <x-logo variant="light" size="lg" class="drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)]" />
             </div>
             <p class="mt-5 text-lg text-white/90 sm:text-xl">{{ __('motel.tagline') }}</p>
             <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <a href="{{ route('rooms.index') }}" class="rounded-xl bg-sand-mid px-6 py-3 font-semibold text-ocean-deep transition hover:bg-sand-light">{{ __('site.home.view_rooms') }}</a>
+                <a href="{{ route('rooms.index') }}" class="rounded-xl bg-white px-6 py-3 font-semibold text-ocean-mid transition hover:bg-brand-sand">{{ __('site.home.view_rooms') }}</a>
                 <a href="{{ route('contact') }}" class="rounded-xl border-2 border-white/60 px-6 py-3 font-semibold text-white transition hover:bg-white/10">{{ __('site.home.contact_us') }}</a>
             </div>
         </div>
@@ -56,7 +56,7 @@
             <p class="mx-auto mt-2 max-w-xl text-center text-ocean-deep/70">{{ __('site.home.offers_subtitle') }}</p>
             <div class="mt-10 grid gap-6 md:grid-cols-2">
                 @foreach (__('motel.offers') as $offer)
-                    <div class="rounded-2xl border border-ocean-mid/30 bg-gradient-to-br from-ocean-deep/5 to-ocean-mid/5 p-6">
+                    <div class="rounded-2xl border border-ocean-mid/30 bg-gradient-to-br from-ocean-mid/5 to-ocean-mid/10 p-6">
                         <h3 class="text-xl font-semibold text-ocean-deep">{{ $offer['title'] }}</h3>
                         <p class="mt-2 text-sm leading-relaxed text-ocean-deep/75">{{ $offer['description'] }}</p>
                     </div>
@@ -71,7 +71,7 @@
         <div class="mt-10 grid gap-6 md:grid-cols-3">
             @foreach (__('motel.testimonials') as $testimonial)
                 <blockquote class="rounded-2xl border border-sand-mid/40 bg-white p-6 shadow-sm">
-                    <div class="flex gap-0.5 text-sand-mid" aria-hidden="true">
+                    <div class="flex gap-0.5 text-ocean-mid" aria-hidden="true">
                         @for ($i = 0; $i < ($testimonial['rating'] ?? 5); $i++)
                             <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         @endfor
